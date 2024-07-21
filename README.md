@@ -1,5 +1,13 @@
 # shell_script_101
-Welcome to my presentation on shell scripts
+Welcome to my presentation on shell scripts!
+
+## Presentations
+### Upcoming Presentations
+ 1. [THAT Conference Wisconsin - August 1st, 2024](https://thatconference.com/activities/sHZuD0q3tFK5B4tffKzV)
+ 1. [DevOpsDays Minneapolis - August 7th, 2024](https://devopsdays.org/events/2024-minneapolis/program/corwin-diamond)
+
+ ### Past Presentations
+
 
 ## Dependencies
 *Figlet*: to install figlet, run `$ brew install figlet`
@@ -34,7 +42,9 @@ In order to run, many of the functions require auth, context, and environment va
 ```
 brew install qrencode
 qrencode -t ANSI -o - "https://github.com/CorwinDiamond/shell_script_101"
+```
 
 ## Other Resources
  - https://www.shellscript.sh/index.html
+ - https://github.com/paxtonhare/demo-magic
  - Code for generating headshot.txt was inspired by [converting-image-ascii-image-python](https://geeksforgeeks.org/converting-image-ascii-image-python)
