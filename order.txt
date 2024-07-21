@@ -1,0 +1,14 @@
+welcome.sh
+prize.sh
+about.sh
+shell.sh
+vars.sh
+cmds.sh
+power.sh
+profile.sh
+kube.sh
+dev.sh
+jokes.sh
+questions.sh
+thoughts.sh
+prize.sh
