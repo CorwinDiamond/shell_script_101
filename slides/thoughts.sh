@@ -23,5 +23,7 @@ bullet "Wrap executable with a function or shell file"
 bullet "Executable in bin"
 bullet "Variable Scope"
 bullet "StackOverflow"
+bullet "Loops, use an sdk and language"
+bullet "Using untrusted input, use a language"
 ln
 heading "https://github.com/SPSCommerce/shell_script_101"

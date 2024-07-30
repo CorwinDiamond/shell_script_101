@@ -15,6 +15,10 @@ heading "CI"
 bullet "CI can run shell scripts"
 bullet "Sets of functions and cleanup can be combined into shell functions"
 bullet "Populating a \"local\" db with fake data is easy with a script"
+heading "Startup Scripts"
+bullet "Language agnostic creds and secrets"
+bullet "OS Config"
+bullet "SDK and parameterizing is prefered"
 ln
 ln
 heading "Clear Check"
