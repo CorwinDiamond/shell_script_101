@@ -48,13 +48,16 @@ read -p "enter branch "
 echo $REPLY
 if [[ ! $REPLY =~ "skip" ]]
 then
+    # TODO sed Event name string to remove spaces
+    NO_SPACE_EVENT_NAME=$(echo $EVENT_NAME | sed -e 's/ /-/g')
+    echo "prove no spaces $NO_SPACE_EVENT_NAME"
     string="git checkout -b $REPLY"
     pe "$string"
     # TODO CONFIG text file path
-    pe "echo \"Updated \$(date \"+%Y-%m-%d at %T\")\" >> $EVENT_NAME.txt"
-    pe "cat $EVENT_NAME.txt"
-    pe "git add $EVENT_NAME.txt"
-    pe "git commit -m \"Doc($EVENT_NAME.txt): Meaningful $EVENT_NAME Update!\""
+    pe "echo \"Updated \$(date \"+%Y-%m-%d at %T\")\" >> $NO_SPACE_EVENT_NAME.txt"
+    pe "cat $NO_SPACE_EVENT_NAME.txt"
+    pe "git add $NO_SPACE_EVENT_NAME.txt"
+    pe "git commit -m \"Doc($NO_SPACE_EVENT_NAME.txt): Meaningful $EVENT_NAME Update!\""
     pe 'git push'
     pe 'doit'
 fi

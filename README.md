@@ -48,3 +48,6 @@ qrencode -t ANSI -o - "https://github.com/CorwinDiamond/shell_script_101"
  - https://www.shellscript.sh/index.html
  - https://github.com/paxtonhare/demo-magic
  - Code for generating headshot.txt was inspired by [converting-image-ascii-image-python](https://geeksforgeeks.org/converting-image-ascii-image-python)
+
+## Connect
+Linkedin: https://www.linkedin.com/in/corwind/
