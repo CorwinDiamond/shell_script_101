@@ -22,7 +22,7 @@ ln
 heading "OK I will show you how it is done on this mac..."
 ln
 txt 'function joke {'
-txt '    jokes=("'
+txt '    jokes=('
 txt '        "There are 10 kinds of people in this world, those that understand binary and those that do not"'
 txt '        "You should use darkmode, light attracts bugs"'
 txt '        "There is a rumor about a gigantic boolean, huge if true"'
