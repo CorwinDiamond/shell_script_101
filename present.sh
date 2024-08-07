@@ -1,6 +1,7 @@
 #! /bin/zsh -
 source functions.sh
-slides=($(cat order.txt))
+# slides=($(cat order.txt))
+slides=($(cat devops_order.txt))
 # slides=(power.sh)
 echo $slides_from_file
 

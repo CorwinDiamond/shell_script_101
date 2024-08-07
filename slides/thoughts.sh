@@ -17,7 +17,6 @@ ascii "     #####     .....     .....#####.....#####"
 ascii "               ...............###############"
 ln
 heading "Have fun scripting!"
-txt "remember:"
 bullet "man [cmd]"
 bullet "Wrap executable with a function or shell file"
 bullet "Executable in bin"

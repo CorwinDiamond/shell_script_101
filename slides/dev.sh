@@ -11,14 +11,18 @@ ln
 heading "Make"
 bullet "makefiles are equivalent to syntactic sugar shell scripts"
 bullet "package long processes and loops into shell scripts"
+wait_for_presenter -fb
 heading "CI"
 bullet "CI can run shell scripts"
 bullet "Sets of functions and cleanup can be combined into shell functions"
 bullet "Populating a \"local\" db with fake data is easy with a script"
+wait_for_presenter -fb
 heading "Startup Scripts"
 bullet "Language agnostic creds and secrets"
 bullet "OS Config"
-bullet "SDK and parameterizing is prefered"
+bullet "AWS user data scripts"
+bullet "Consider SDK and parameterizing"
+wait_for_presenter -fb
 ln
 ln
 heading "Clear Check"
@@ -27,5 +31,5 @@ txt "Engineers are able to review the information faster as part of the clear ch
 ln
 ln
 heading "Demo clear_check.sh"
-wait_for_presenter
+wait_for_presenter -fb
 pe "bash ./examples/clear_check.sh -demo"    

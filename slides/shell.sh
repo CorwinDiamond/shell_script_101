@@ -32,6 +32,7 @@ bullet "Ksh" #          Korn shell - David G. Korn"
 bullet "Zsh" #          Z shell - Mac Default"
 bullet "Fish" #         Friendly interactive shell"
 bullet "Powershell"
+wait_for_presenter -fb
 ln
 txt "All shells are similar but different."
 txt "Powershell is more different but similar."
@@ -48,12 +49,9 @@ read -p "enter branch "
 echo $REPLY
 if [[ ! $REPLY =~ "skip" ]]
 then
-    # TODO sed Event name string to remove spaces
     NO_SPACE_EVENT_NAME=$(echo $EVENT_NAME | sed -e 's/ /-/g')
-    echo "prove no spaces $NO_SPACE_EVENT_NAME"
     string="git checkout -b $REPLY"
     pe "$string"
-    # TODO CONFIG text file path
     pe "echo \"Updated \$(date \"+%Y-%m-%d at %T\")\" >> $NO_SPACE_EVENT_NAME.txt"
     pe "cat $NO_SPACE_EVENT_NAME.txt"
     pe "git add $NO_SPACE_EVENT_NAME.txt"

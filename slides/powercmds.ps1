@@ -32,7 +32,7 @@ function get-command-txt {
     bullet "List possible commands"
     bullet "I use Google"
     bullet "This tells you what comands are actually installed"
-    bullet "Way to many commands to demo"
+    bullet "Way too many commands to demo"
 
     heading "Get-Commnad Filtering"
     bullet "Get commands by verb or noun"
@@ -157,13 +157,16 @@ function invoke-webrequest-example {
 
     wait_for_presenter
 
-    $PUBLIC_IP = Invoke-WebRequest -Uri https://ipinfo.io/ip
-    $Response = Invoke-WebRequest -Uri "https://ipinfo.io/${PUBLIC_IP}" | ConvertFrom-Json
-    $local_coords = $Response.loc
-    $Response = Invoke-WebRequest -Uri "https://api.weather.gov/points/${local_coords}"| ConvertFrom-Json
-    $Complete_Forecast = Invoke-WebRequest -Uri $Response.properties.forecast | ConvertFrom-Json
-    $Forecast = $Complete_Forecast.properties.periods[0]
-    Write-Host $(If ($Forecast.isDaytime) {"TODAY:"} Else {"TONIGHT:"}) $Forecast.detailedForecast
+    # $PUBLIC_IP = Invoke-WebRequest -Uri https://ipinfo.io/ip
+    # $Response = Invoke-WebRequest -Uri "https://ipinfo.io/${PUBLIC_IP}" | ConvertFrom-Json
+    # $local_coords = $Response.loc
+    # $Response = Invoke-WebRequest -Uri "https://api.weather.gov/points/${local_coords}"| ConvertFrom-Json
+    # $Complete_Forecast = Invoke-WebRequest -Uri $Response.properties.forecast | ConvertFrom-Json
+    # $Forecast = $Complete_Forecast.properties.periods[0]
+    # I have been having enough issues with all of the calls, that I fake the live demo.
+    # Write-Host $(If ($Forecast.isDaytime) {"TODAY:"} Else {"TONIGHT:"}) $Forecast
+    $Forecast = Get-Content examples/weather.txt
+    Write-Host "TODAY:" $Forecast
 }
 
 $commands= "get-command","select-object","where-object","write","get-content","file","invoke-webrequest"
