@@ -15,7 +15,7 @@ ascii "   #                                    "
 ln
 
 txt "Because some people use Windows..."
-bullet "Output tables and objets natively"
+bullet "Output tables and objects natively"
 bullet "Easier manipulation of piped data"
 bullet "Many BASH commands are aliased, but not documented"
 bullet "Yes this slide is written in Powershell instead of BASH"
