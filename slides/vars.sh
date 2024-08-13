@@ -63,4 +63,4 @@ txt "Examples will be availible in the presentation repo..."
 # wait_for_presenter -fb
 ln
 ln
-heading "This is a tough slide to remember; I have relearned the difference between source and execution many times."
+heading "This is a tough slide to remember; I have relearn this concept every year."

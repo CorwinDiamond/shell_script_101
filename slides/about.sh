@@ -12,8 +12,7 @@ echo "$Lines"
 printf "${normal}"
 
 heading "About me"
-bullet "3 years at SPS Commerce"
-bullet "2.5 years at Target"
+bullet "3 years at SPS Commerce, 2.5 years at Target"
 bullet "Starting MSSE at UMN this fall"
 bullet "5 years driving and dispatching school buses"
 bullet "10 years instructing and guiding rock climbing"
@@ -27,6 +26,7 @@ bullet "I don't like to type everything everytime"
 bullet "I don't remember commands that well"
 bullet "Why type the same commands over and over"
 bullet "Add logic to commands"
+bullet "Automation!"
 bullet "Feel like a hacker!!!"
 ln
 ln

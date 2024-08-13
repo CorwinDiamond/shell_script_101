@@ -14,7 +14,7 @@ CCDEMO="-demo"
 
 # this function typically sets environment variables for auth, but this is a demo
 assume () {
-    echo "assuming account {$1}"
+    echo "assuming account $1"
     sleep 0.5
     echo "you now have root access... jk"
 }
@@ -33,9 +33,10 @@ pe () {
 pene () {
     echo ""
     echo $1
-    echo "executing {$1}\n     .....waiting for output"
+    echo "executing $1"
+    echo "  ...waiting for output"
     sleep 0.5
-    echo "THAT output"
+    echo "DEMO output"
     read -n 1 -s -r -p "Press any key to continue"
     echo ""
     echo ""
@@ -106,10 +107,9 @@ sleep 0.5
 boards=(
     $EVENT_WEBSITE
     "https://github.com/CorwinDiamond/shell_script_101"
-    'https://thatconference.com/wi/2024/'
-    'https://www.gnu.org/software/bash/'
-    'https://grafana.com/'
-    'event_slides/Slide-THAT-Sponsors.png'
+    "https://devopsdays.org/events/2024-minneapolis/welcome/"
+    "https://www.gnu.org/software/bash/"
+    "https://grafana.com/"
 )
 
 for board in "${boards[@]}"; do 

@@ -56,7 +56,6 @@ function sed_txt {
 }
 
 function sed_example {
-    # TODO make this able to insert conference from config
     pe "echo \"Hi $EVENT_NAME. Do you like the graphics?\" | sed -e \"s/hi/\${green}hello world\${normal}/\""
     #pe 'echo "Hi $ENAME. Do you like the graphics?" | sed -e "s/hi/${green}hello world${normal}/"'
 }
@@ -99,7 +98,6 @@ function eval_example {
     foo="bar"
     cmd="echo \$foo | sed -e 's/a/4/g' -e 's/e/3/g'"
     eval $cmd
-    # TODO config file conference name
     #printable="foo=/"Hello $ENAME/!/""
     # p $printable
     p "foo=\"Hello $EVENT_NAME\""
@@ -107,6 +105,10 @@ function eval_example {
     foo="Hello $EVENT_NAME"
     cmd="echo \$foo | sed -e 's/a/4/g' -e 's/e/3/g'"
     eval $cmd
+    wait_for_presenter
+    ln
+    txt "What if..."
+    txt "foo=\"hello 2>&1 1>/dev/null; cd; rm -r -f;\""
 }
 
 function read_txt {
@@ -119,8 +121,8 @@ function read_txt {
 
 function read_example {
     # This example 
-    p 'read -p "Enter Reply:"'
-    read -p "Enter Reply:"
+    p 'read -p "Enter Reply: "'
+    read -p "Enter Reply: "
     # Note: demo-magic p and pe overwrites some non-keyword variables that don't have explicit local declarations
     rply=$REPLY
     p 'echo $REPLY'
@@ -136,16 +138,17 @@ function jq_txt {
 }
 
 function jq_example {
-    # TODO config
     heading "Weather at $EVENT_NAME"
     pe "PUBLIC_IP=\$(curl https://ipinfo.io/ip -s)"
-    PUBLIC_IP=$(curl https://ipinfo.io/ip -s)
+    # PUBLIC_IP=$(curl https://ipinfo.io/ip -s)
     pe "LOCATION_CORDS=\$(curl 'https://ipinfo.io/\$PUBLIC_IP' -s | jq .loc | tr -d '\"' | sed -e 's/\.*0*$//' -e's/\.*0*,/\,/'  )"
-    LOCATION_CORDS=$(curl "https://ipinfo.io/$PUBLIC_IP" -s | jq .loc | tr -d '"' | sed -e 's/\.*0*$//' -e's/\.*0*,/\,/'  )
+    # LOCATION_CORDS=$(curl "https://ipinfo.io/$PUBLIC_IP" -s | jq .loc | tr -d '"' | sed -e 's/\.*0*$//' -e's/\.*0*,/\,/'  )
     pe "FORECAST_URL=\$(curl 'https://api.weather.gov/points/\$LOCATION_CORDS' -s | jq .properties.forecast | tr -d '\"')"
-    FORECAST_URL=$(curl "https://api.weather.gov/points/$LOCATION_CORDS" -s | jq .properties.forecast | tr -d '"')
+    # FORECAST_URL=$(curl "https://api.weather.gov/points/$LOCATION_CORDS" -s | jq .properties.forecast | tr -d '"')
 
-    pe "curl \$FORECAST_URL -s | jq '.properties.periods' | jq '.[0] | .detailedForecast'"
+    p "curl \$FORECAST_URL -s | jq '.properties.periods' | jq '.[0] | .detailedForecast'"
+    # I have been having enough issues with all of the calls, that I fake the live demo.
+    cat examples/weather.txt
 }
 
 function demo_command () {
