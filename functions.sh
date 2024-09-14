@@ -90,7 +90,6 @@ function joke {
         "There are 10 kinds of people in this world, those that understand binary and those that do not"
         "You should use darkmode, light attracts bugs"
         "There is a rumor about a gigantic boolean, huge if true"
-        "!False, it is funny because it is True."
     )
     size=${#jokes[@]}
     jokeindex=$(jot -r 1 1 $size)

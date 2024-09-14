@@ -5,6 +5,7 @@ Welcome to my presentation on shell scripts!
 ### Upcoming Presentations
  1. [THAT Conference Wisconsin - August 1st, 2024](https://thatconference.com/activities/sHZuD0q3tFK5B4tffKzV)
  1. [DevOpsDays Minneapolis - August 7th, 2024](https://devopsdays.org/events/2024-minneapolis/program/corwin-diamond)
+   - [Youtube Recording](https://www.youtube.com/watch?v=MSxUM2dHrOc)
 
  ### Past Presentations
 
