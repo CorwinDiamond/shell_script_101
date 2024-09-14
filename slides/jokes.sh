@@ -26,7 +26,6 @@ txt '    jokes=('
 txt '        "There are 10 kinds of people in this world, those that understand binary and those that do not"'
 txt '        "You should use darkmode, light attracts bugs"'
 txt '        "There is a rumor about a gigantic boolean, huge if true"'
-txt '        "!False, it is funny because it is True."'
 txt '    )'
 txt '    size=${#jokes[@]}'
 txt '    jokeindex=$(jot -r 1 1 $size)'
@@ -42,4 +41,5 @@ txt '    say $j'
 txt '}'
 ln
 wait_for_presenter
-pe "sjoke"
+pene "sjoke"
+sjoke
